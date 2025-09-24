@@ -1,0 +1,16 @@
+CREATE TABLE `test_case_list` (
+	`id` INT ( 0 ) NOT NULL AUTO_INCREMENT,
+	`web` VARCHAR ( 255 ) DEFAULT NULL,
+	`module` VARCHAR ( 255 ) DEFAULT NULL,
+	`title` VARCHAR ( 255 ) DEFAULT NULL,
+	`url` VARCHAR ( 255 ) DEFAULT NULL,
+	`method` VARCHAR ( 255 ) DEFAULT NULL,
+	`headers` VARCHAR ( 255 ) DEFAULT NULL,
+	`cookies` VARCHAR ( 1000 ) DEFAULT NULL,
+	`request_body` VARCHAR ( 1000 ) DEFAULT NULL,
+	`request_type` VARCHAR ( 255 ) DEFAULT NULL,
+	`relation` VARCHAR ( 255 ) DEFAULT NULL,
+	`expected_code` VARCHAR ( 255 ) DEFAULT NULL COMMENT 'assert',
+	`isdel` INT ( 0 ) DEFAULT 1 COMMENT '1 for vaild',
+PRIMARY KEY ( `id` ) USING BTREE 
+) ENGINE = INNODB;
